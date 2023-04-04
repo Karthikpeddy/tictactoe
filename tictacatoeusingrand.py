@@ -11,6 +11,8 @@ print("welcome to tictactoe")
 flag=1
 l=[]
 l1=[]
+rli=[0,1,2]
+rli1=[0,1,2]
 for i in range(8):
     if(flag%2!=0):
         print("its x chance")
@@ -23,8 +25,8 @@ for i in range(8):
             mat[l[0]][l[1]]='x'  
     elif(flag%2==0):
         print("its o's chance")
-        r1=random.randint(0,2)
-        r2=random.randint(0,2)
+        r1=random.choice(rli)
+        r2=random.choice(rli1)
         l1.append(r1) 
         l1.append(r2)
         if(mat[l1[0]][l1[1]]=='x' or mat[l1[0]][l1[1]]=='o'):
