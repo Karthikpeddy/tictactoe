@@ -1,3 +1,4 @@
+import random
 def wins(mat,flag):
     if(mat[0][0]==mat[0][1]==mat[0][2]==('x' or 'o') or mat[1][0]==mat[1][1]==mat[1][2]==('x' or 'o') or mat[2][0]==mat[2][1]==mat[2][2]==('x' or 'o') or mat[0][0]==mat[1][0]==mat[2][0]==('x' or 'o') or mat[0][1]==mat[1][1]==mat[2][1]==('x' or 'o') or mat[0][2]==mat[1][2]==mat[2][2]==('x' or 'o') or mat[0][0]==mat[1][1]==mat[2][2]==('x' or 'o') or mat[0][2]==mat[1][1]==mat[2][0]==('x' or 'o')):
         print("winner declared ...match over")
@@ -22,8 +23,10 @@ for i in range(8):
             mat[l[0]][l[1]]='x'  
     elif(flag%2==0):
         print("its o's chance")
-        b=input("Enter the index with space where you want to insert:")
-        l1=list(map(int,b.split()))   
+        r1=random.randint(0,3)
+        r2=random.randint(0,3)
+        l1.append(r1) 
+        l1.append(r2)
         if(mat[l1[0]][l1[1]]=='x' or mat[l1[0]][l1[1]]=='o'):
             print("sorry its already has been filled")
             flag=flag-1
