@@ -23,19 +23,23 @@ for i in range(16):
             flag=flag-1
         else:
             mat[l[0]][l[1]]='x'  
+        l.clear()
     elif(flag%2==0):
         print("its o's chance")
         r1=random.choice(rli)
         r2=random.choice(rli1)
         l1.append(r1) 
         l1.append(r2)
+        print(r1,r2)
         if(mat[l1[0]][l1[1]]=='x' or mat[l1[0]][l1[1]]=='o'):
             print("sorry its already has been filled")
             flag=flag-1
         else:
             mat[l1[0]][l1[1]]='o' 
+        l1.clear()
     flag=flag+1   
-    print(mat)
+    for x in mat:
+        print(str(x)+"\n")
     if(flag==5 or flag>5):
        b= wins(mat,flag)
        if(b==1):
