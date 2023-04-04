@@ -13,7 +13,7 @@ l=[]
 l1=[]
 rli=[0,1,2]
 rli1=[0,1,2]
-for i in range(8):
+for i in range(16):
     if(flag%2!=0):
         print("its x chance")
         a=input("Enter the index with space where you want to insert:")
