@@ -23,8 +23,8 @@ for i in range(8):
             mat[l[0]][l[1]]='x'  
     elif(flag%2==0):
         print("its o's chance")
-        r1=random.randint(0,3)
-        r2=random.randint(0,3)
+        r1=random.randint(0,2)
+        r2=random.randint(0,2)
         l1.append(r1) 
         l1.append(r2)
         if(mat[l1[0]][l1[1]]=='x' or mat[l1[0]][l1[1]]=='o'):
